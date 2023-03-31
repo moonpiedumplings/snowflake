@@ -1,4 +1,4 @@
-containers.demo = {
+containers.${builtins.ReadFile ./name} = {
   extra = {
     # Sets
     # privateNetwork = true
