@@ -1,10 +1,9 @@
 {
   containers.test = {
-        extra = {
-                addressPrefix = "10.25.0";
-                enableWAN = true;
-        };
-    # extra.enableWAN = true;
+    extra = {
+            addressPrefix = "10.25.0";
+            enableWAN = true;
+    };
 
     config = { pkgs, ... }: {
       systemd.services.hello = {
