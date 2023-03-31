@@ -1,6 +1,6 @@
 {
-containers.test = {
-  extra = {
+  containers.test = {
+    extra = {
     # Sets
     # privateNetwork = true
     # hostAddress = "${addressPrefix}.1"
