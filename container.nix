@@ -1,3 +1,4 @@
+{
 containers.test = {
   extra = {
     # Sets
@@ -25,3 +26,4 @@ containers.test = {
       networking.firewall.allowedTCPPorts = [ 50 ];
   }
 };
+}
