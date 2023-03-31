@@ -1,5 +1,5 @@
 {
-  containers.test = {
+  containers.${builtins.readFile ./name} = {
     extra = {
     # Sets
     # privateNetwork = true
