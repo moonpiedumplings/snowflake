@@ -6,7 +6,6 @@
     # hostAddress = "${addressPrefix}.1"
     # localAddress = "${addressPrefix}.2"
     addressPrefix = "10.250.0";
-
     # Enable internet access for the container
     enableWAN = true;
     # Always allow connections from hostAddress
@@ -24,6 +23,6 @@
         '';
       };
       networking.firewall.allowedTCPPorts = [ 50 ];
-  }
+  };
 };
 }
