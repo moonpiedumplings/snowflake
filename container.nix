@@ -35,7 +35,7 @@
         users.users.test = {
           isNormalUser = true;
           extraGroups = [ "wheel" "docker"];
-          hashedPassword = ${builtins.readFile ./hpass};
+          hashedPassword = "${builtins.readFile ./hpass}";
         };
     };
   };
