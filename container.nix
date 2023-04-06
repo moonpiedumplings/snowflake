@@ -34,7 +34,7 @@
         };
         users.users.test = {
           isNormalUser = true;
-          extraGroups = [ wheel docker];
+          extraGroups = [ "wheel" "docker"];
           passwordFile = ./hpass;
         };
     };
