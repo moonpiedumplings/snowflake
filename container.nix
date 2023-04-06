@@ -12,17 +12,31 @@
     firewallAllowHost = true;
     # Make the container's localhost reachable via localAddress
     exposeLocalhost = true;
-  };
-  config = { pkgs, ... }: {
-      systemd.services.hello = {
-        wantedBy = [ "multi-user.target" ];
-        script = ''
-          while true; do
-            echo hello | ${pkgs.netcat}/bin/nc -lN 50
-          done
-        '';
-      };
-      networking.firewall.allowedTCPPorts = [ 50 ];
-  };
+    };
+    config = { config, pkgs, ... }: {
+        systemd.services.hello = {
+          wantedBy = [ "multi-user.target" ];
+          script = ''
+            while true; do
+              echo hello | ${pkgs.netcat}/bin/nc -lN 50
+            done
+          '';
+        };
+        networking.firewall.allowedTCPPorts = [ 50 ];
+        service.xserver = {
+          enable = true;
+          xserver.desktopManager.plasma5.enable = true;
+        };
+        services.xrdp = {
+          enable = true;
+          openFirewall = true;
+          defaultWindowManager = "startplasma-x11";
+        };
+        users.users.test = {
+          isNormalUser = true;
+          extraGroups = [ wheel docker];
+          passwordFile = ./hpass;
+        };
+    };
   };
 }
