@@ -23,7 +23,7 @@
           '';
         };
         networking.firewall.allowedTCPPorts = [ 50 ];
-        service.xserver = {
+        services.xserver = {
           enable = true;
           xserver.desktopManager.plasma5.enable = true;
         };
