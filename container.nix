@@ -25,7 +25,7 @@
         networking.firewall.allowedTCPPorts = [ 50 ];
         services.xserver = {
           enable = true;
-          xserver.desktopManager.plasma5.enable = true;
+          desktopManager.plasma5.enable = true;
         };
         services.xrdp = {
           enable = true;
