@@ -25,12 +25,15 @@
         networking.firewall.allowedTCPPorts = [ 50 ];
         services.xserver = {
           enable = true;
-          desktopManager.plasma5.enable = true;
+          desktopManager = {
+            xterm.enable = false;
+            xfce.enable = true;
+          };
         };
         services.xrdp = {
           enable = true;
           openFirewall = true;
-          defaultWindowManager = "startplasma-x11";
+          defaultWindowManager = "startxfce4";
         };
         users.users.test = {
           isNormalUser = true;
