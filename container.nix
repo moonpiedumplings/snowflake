@@ -1,5 +1,6 @@
 {
   containers.${builtins.readFile ./name} = {
+    nixpkgs = import <nixpkgs> {};
     extra = {
     # Sets
     # privateNetwork = true
