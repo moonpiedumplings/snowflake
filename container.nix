@@ -14,7 +14,6 @@
     exposeLocalhost = true;
     };
     config = { config, pkgs, ... }: {
-        import <nixpkgs> {};
         systemd.services.hello = {
           wantedBy = [ "multi-user.target" ];
           script = ''
