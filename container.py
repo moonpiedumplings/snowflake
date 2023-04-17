@@ -44,6 +44,14 @@ class Container:
             with open(attribute_name, 'w') as file:
                 file.write(str(attribute_value))
         # will add extra-container starter here
+        # os.system("extra-container create" + container used string var?)
+    '''
+    def start(self):
+        os.system("extra-container start " + self.name)
+
+    def stop(self):
+        os.system("extra-container stop " + self.name)  
+    '''
 
 
 
